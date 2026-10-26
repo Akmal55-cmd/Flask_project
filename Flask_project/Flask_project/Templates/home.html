@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/style.css')}}">
+</head>
+<body>
+    <h1>Hello</h1>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <center>
+        <br>
+        <br>
+    <div class="box">
+        <Table border="" style="height: 100px; width: 200px;">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <th>{{name}}</th>
+                <th>{{age}}</th>
+            </tr>
+        </Table>
+        </center>
+    </div>
+    {% if age >= 18 %}
+        <h1 style="color: green;">You are Eligible to vote</h1>
+    {% else %}
+        <h1>You are not eligible to vote</h1>
+    {% endif %}
+     
+    <img class="img"   src="{{url_for('static', filename='Image/img1.jpg')}}" alt="">
+</body>
+</html>
+{% endblock %}

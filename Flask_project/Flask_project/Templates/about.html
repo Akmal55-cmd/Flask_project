@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>About</h1>
+    {% for i in s %}
+    <h3>Name : {{i.name}}</h3>
+    <h3>Age : {{i.age}}</h3>
+    <h3>Address : {{i.address}}</h3>
+    <h3>Marks : {{i.marks}}</h3>
+    <br> <hr>
+    {% endfor %}
+</body>
+</html>
+{% endblock %}
